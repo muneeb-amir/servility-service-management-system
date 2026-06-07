@@ -1,103 +1,123 @@
-Servility 🚪
-"At Your Doorstep"
+# 🚪 Servility
+### *At Your Doorstep*
 
-Servility is a desktop-based Service Management System developed using Java, JavaFX, and Microsoft SQL Server. The platform bridges the gap between service providers and service seekers by enabling users to discover, request, offer, and manage services conveniently from a single application.
+Servility is a JavaFX-based Service Management System that connects **Service Seekers** with **Service Providers** through a centralized platform. The application allows users to discover services, post service requests, manage applications, track service progress, and provide feedback after completion.
 
-Whether someone needs a plumber, electrician, carpenter, cleaner, or any other professional service, Servility brings the service right to their doorstep.
+The goal of Servility is to make professional services easily accessible while providing providers with a platform to showcase their expertise and connect with potential customers.
 
-📌 Project Overview
+---
 
-Servility provides a marketplace-like environment where:
+## 🌟 Features
 
-Service Providers can register, create service listings, manage applications, and earn income.
-Service Seekers can search for services, post service requests, set budgets, and hire suitable providers.
-Both parties can track service progress and maintain transparency throughout the service lifecycle.
-✨ Key Features
-👤 User Authentication
-User Registration
-Secure Login System
-Separate dashboards for:
-Service Seekers
-Service Providers
-🔎 Service Discovery
-Search available services by expertise/category
-View provider details
-Compare services and prices
-🛠 Service Provider Features
-Create service offerings
-Specify:
-Service Name
-Expertise
-Description
-Price
-Manage incoming applications
-Track service status
-View earnings
-🙋 Service Seeker Features
-Browse available services
-Post custom service requests
-Set preferred budget
-Hire providers based on expertise
-Track request status
-📋 Service Request Management
-Post requests for required services
-Accept or reject requests
-Service lifecycle tracking:
-Pending
-Accepted
-Completed
-⭐ Ratings & Feedback
-Provide reviews after service completion
-Improve trust and service quality
-💰 Wallet/Balance Management
-Service Seekers maintain balances
-Service Providers receive earnings
-Transaction-based workflow support
-🏗 System Architecture
-Service Seeker Workflow
+### 🔐 Authentication & User Management
+- User Registration and Login
+- Separate accounts for:
+  - Service Seekers
+  - Service Providers
+- Profile Management
+
+### 👨‍🔧 Service Provider Features
+- Create and publish service listings
+- Specify:
+  - Service Name
+  - Expertise
+  - Description
+  - Price
+- View open requests
+- Manage applications
+- Track earnings
+- Update service status
+
+### 🙋 Service Seeker Features
+- Search available services
+- Browse providers by expertise
+- Post service requests
+- Set custom budgets
+- Track request progress
+- Hire suitable providers
+
+### 📋 Request Management
+- Create service requests
+- Accept or reject applications
+- Service status tracking:
+  - Pending
+  - Accepted
+  - Completed
+
+### ⭐ Ratings & Feedback
+- Submit reviews after service completion
+- Improve transparency and service quality
+
+### 💰 Balance Management
+- Service Seekers maintain account balances
+- Service Providers earn through completed services
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+|------------|----------|
+| Java | Core Application Logic |
+| JavaFX | User Interface |
+| FXML | UI Layout Design |
+| CSS | Styling |
+| JDBC | Database Connectivity |
+| Microsoft SQL Server | Database Management |
+| Scene Builder | JavaFX UI Development |
+
+---
+
+## 🏗️ System Workflow
+
+### Service Seeker
+
+```text
 Register/Login
-       ↓
-Browse Services
-       ↓
+      ↓
+Search Services
+      ↓
 Post Service Request
-       ↓
+      ↓
 Select Provider
-       ↓
+      ↓
 Service Completion
-       ↓
+      ↓
 Rating & Feedback
-Service Provider Workflow
+```
+
+### Service Provider
+
+```text
 Register/Login
-       ↓
+      ↓
 Create Service Listing
-       ↓
+      ↓
 Receive Applications
-       ↓
+      ↓
 Accept Request
-       ↓
+      ↓
 Complete Service
-       ↓
+      ↓
 Receive Earnings
-🖥 Technology Stack
-Technology	Purpose
-Java	Core Application Logic
-JavaFX	User Interface
-FXML	UI Layout Design
-CSS	Styling
-JDBC	Database Connectivity
-Microsoft SQL Server	Database Management
-Scene Builder	JavaFX UI Design
-📂 Project Structure
-Servility/
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+Servility
 │
 ├── App.java
 ├── Application.java
+├── ServiceManagementSystem.java
 │
 ├── Controllers
 │   ├── LoginController.java
 │   ├── SignupController.java
-│   ├── SearchServicesController.java
 │   ├── SearchProvidersController.java
+│   ├── SearchServicesController.java
 │   ├── UserDashboardSeekerController.java
 │   ├── UserDashboardProviderController.java
 │   ├── PostNewServiceRequestController.java
@@ -106,7 +126,7 @@ Servility/
 │   ├── RatingsAndFeedbackPageController.java
 │   └── ...
 │
-├── FXML
+├── FXML Files
 │   ├── login.fxml
 │   ├── signup.fxml
 │   ├── Search_Services.fxml
@@ -115,123 +135,178 @@ Servility/
 │   ├── user_dashboard_seeker.fxml
 │   └── ...
 │
-├── CSS
-│   └── app.css
+├── Resources
+│   ├── servility.png
+│   └── construction_site.jpg
 │
-├── Database
-│   └── ServiceManagementSystem.sql
+├── app.css
 │
-└── Resources
-    ├── servility.png
-    └── construction_site.jpg
-🗄 Database Schema
+└── Database
+    └── ServiceManagementSystem.sql
+```
 
-The project uses Microsoft SQL Server with the following core tables:
+---
 
-ServiceSeekers
-Field	Type
-seeker_id	INT
-name	VARCHAR
-email	VARCHAR
-password	VARCHAR
-balance	DOUBLE
-ServiceProviders
-Field	Type
-provider_id	INT
-name	VARCHAR
-email	VARCHAR
-password	VARCHAR
-expertise	VARCHAR
-balance	DOUBLE
-Services
-Field	Type
-service_id	INT
-provider_id	INT
-sname	VARCHAR
-expertise	VARCHAR
-description	TEXT
-price	DOUBLE
-status	VARCHAR
+## 🗄️ Database Design
 
-Status values:
+### ServiceSeekers
 
+| Column | Type |
+|----------|----------|
+| seeker_id | INT |
+| name | VARCHAR |
+| email | VARCHAR |
+| password | VARCHAR |
+| balance | DOUBLE |
+
+### ServiceProviders
+
+| Column | Type |
+|----------|----------|
+| provider_id | INT |
+| name | VARCHAR |
+| email | VARCHAR |
+| password | VARCHAR |
+| expertise | VARCHAR |
+| balance | DOUBLE |
+
+### Services
+
+| Column | Type |
+|----------|----------|
+| service_id | INT |
+| provider_id | INT |
+| sname | VARCHAR |
+| expertise | VARCHAR |
+| description | TEXT |
+| price | DOUBLE |
+| status | VARCHAR |
+
+### ServiceRequests
+
+| Column | Type |
+|----------|----------|
+| request_id | INT |
+| seeker_id | INT |
+| expertise | VARCHAR |
+| description | TEXT |
+| budget | DOUBLE |
+| providername | VARCHAR |
+| status | VARCHAR |
+
+### Service Status Values
+
+```text
 pending
 accepted
 completed
-ServiceRequests
-Field	Type
-request_id	INT
-seeker_id	INT
-expertise	VARCHAR
-description	TEXT
-budget	DOUBLE
-providername	VARCHAR
-status	VARCHAR
+```
 
-Status values:
+---
 
-pending
-accepted
-completed
-🚀 Installation & Setup
-Prerequisites
-JDK 17 or later
-JavaFX SDK
-Microsoft SQL Server
-SQL Server Management Studio (SSMS)
-IDE (IntelliJ IDEA / Eclipse / NetBeans)
-1. Clone Repository
-git clone https://github.com/yourusername/servility.git
-2. Create Database
+## 🚀 Getting Started
 
-Open SQL Server and execute:
+### Prerequisites
 
+- Java JDK 17+ (or compatible version)
+- JavaFX SDK
+- Microsoft SQL Server
+- SQL Server Management Studio (SSMS)
+- IntelliJ IDEA / Eclipse / NetBeans
+
+---
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/servility-service-management-system.git
+```
+
+---
+
+### 2️⃣ Create the Database
+
+```sql
 CREATE DATABASE ServiceManagementSystem;
+```
 
-Then run the provided SQL schema file.
+Execute the provided SQL schema to create all required tables.
 
-3. Configure Database Connection
+---
 
-Update database credentials in your JDBC connection file:
+### 3️⃣ Configure Database Connection
 
+Update the JDBC configuration in your project:
+
+```java
 String url = "jdbc:sqlserver://localhost:1433;databaseName=ServiceManagementSystem";
 String username = "your_username";
 String password = "your_password";
-4. Add JavaFX Libraries
+```
 
-Configure JavaFX SDK in your IDE.
+---
+
+### 4️⃣ Configure JavaFX
+
+Add JavaFX SDK to your IDE.
 
 VM Options:
 
+```bash
 --module-path "PATH_TO_FX" --add-modules javafx.controls,javafx.fxml
-5. Run Application
+```
 
-Execute:
+---
 
+### 5️⃣ Run the Application
+
+Run:
+
+```text
 App.java
+```
 
 or
 
+```text
 Application.java
+```
 
-depending on your project configuration.
+depending on your project setup.
 
-📸 Screens Included
-Login Page
-Signup Page
-Provider Dashboard
-Seeker Dashboard
-Service Search
-Service Posting
-Open Requests View
-Earnings Management
-Ratings & Feedback
-🎯 Future Enhancements
-Online payment integration
-Real-time notifications
-Chat between seekers and providers
-Service recommendations
-GPS-based provider matching
-Mobile application support
-Admin panel
-Service history analytics
+---
+
+## 📸 Application Modules
+
+- Login System
+- Signup System
+- Service Search
+- Provider Search
+- Service Posting
+- Request Management
+- User Dashboards
+- Earnings Management
+- Ratings & Feedback
+- Profile Management
+
+---
+
+## 🎯 Future Improvements
+
+- Online Payment Integration
+- Real-Time Notifications
+- In-App Messaging
+- GPS-Based Service Discovery
+- Recommendation System
+- Admin Dashboard
+- Mobile Application Version
+- Service Analytics & Reporting
+
+---
+
+## 💡 Motivation
+
+Finding trustworthy service providers can often be time-consuming and inconvenient. Servility aims to simplify this process by providing a platform where users can easily discover services and connect with skilled professionals, bringing quality services directly **"At Your Doorstep."**
+
+---
+
