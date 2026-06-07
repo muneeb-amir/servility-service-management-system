@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="PostNewServiceRequestController"  prefWidth="800" prefHeight="600" style="-fx-background-color: #addee6;">
+    <children>
+        <!-- Header: Centered at the top of the screen -->
+        <Label text="Post New Service Request" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" layoutY="30"
+               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2196F3;" alignment="CENTER"/>
+
+        <!-- Form Layout (GridPane centered with lower position) -->
+        <GridPane hgap="20" vgap="20" alignment="CENTER" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="120">
+            <children>
+                <!-- Job Type -->
+                <Label text="Job Type:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-size: 16px;"/>
+                <ComboBox fx:id="jobTypeComboBox" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="350"/>
+
+                <!-- Price -->
+                <Label text="Price:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-size: 16px;"/>
+                <TextField fx:id="priceField" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="350"/>
+
+                <!-- Description of Job -->
+                <Label text="Description of Job:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-size: 16px;"/>
+                <TextField fx:id="timeField" promptText="Provide details about the job" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="350"/>
+            </children>
+        </GridPane>
+
+        <!-- Buttons Layout -->
+        <HBox spacing="40" alignment="CENTER" AnchorPane.bottomAnchor="40" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
+            <Button text="Back" fx:id="backButton" onAction="#handleBack" prefWidth="150" prefHeight="50"
+                    style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Button text="Submit" fx:id="submitButton" onAction="#handleSubmit" prefWidth="150" prefHeight="50"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+        </HBox>
+    </children>
+</AnchorPane>

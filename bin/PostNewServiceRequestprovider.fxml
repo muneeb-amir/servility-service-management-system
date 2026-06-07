@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="PostNewServiceRequestproviderController" stylesheets="app.css" prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <!-- Centered VBox -->
+        <VBox spacing="20" alignment="CENTER" layoutX="50" layoutY="30" prefWidth="500" prefHeight="340">
+            <!-- Header -->
+            <Label text="Post New Service Request" style="-fx-font-size: 28px; -fx-font-family: 'Arial Black'; -fx-text-fill: black;" wrapText="true" textAlignment="CENTER" maxWidth="480" maxHeight="50"/>
+
+            <!-- Job Description -->
+            <Label text="Job Description:" style="-fx-font-size: 16px; -fx-font-family: 'Arial';" maxWidth="480"/>
+            <TextField fx:id="jobTypeField" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: lightgray; -fx-border-width: 2; -fx-pref-height: 35; -fx-pref-width: 480;"/>
+
+            <!-- Price -->
+            <Label text="Price:" style="-fx-font-size: 16px; -fx-font-family: 'Arial';" maxWidth="480"/>
+            <TextField fx:id="priceField" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: lightgray; -fx-border-width: 2; -fx-pref-height: 35; -fx-pref-width: 480;"/>
+
+            <!-- Buttons -->
+            <HBox spacing="30" alignment="CENTER">
+                <Button text="Back" fx:id="backButton" onAction="#handleBack" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-family: 'Arial'; -fx-background-radius: 10; -fx-pref-width: 100; -fx-pref-height: 40;"/>
+                <Button text="Submit" fx:id="submitButton" onAction="#handleSubmit" style="-fx-background-color: #1E90FF; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-family: 'Arial'; -fx-background-radius: 10; -fx-pref-width: 100; -fx-pref-height: 40;"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

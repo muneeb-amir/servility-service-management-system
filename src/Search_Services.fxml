@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchServicesController" stylesheets="app.css">
+    <children>
+        <!-- Header -->
+        <VBox alignment="CENTER" layoutX="50" layoutY="20" prefWidth="700" prefHeight="450" spacing="20">
+            <Label text="Search Services" 
+                   style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2196F3;" alignment="CENTER"/>
+            
+            <!-- Results Table -->
+            <TableView fx:id="servicesTable" prefWidth="700" maxHeight="350" style="-fx-background-color: #f1f1f1; -fx-border-color: #2196F3; -fx-border-radius: 10;">
+                <columns>
+                    <TableColumn text="Provider Name" fx:id="providerNameColumn" prefWidth="120"/>
+                    <TableColumn text="Job Type" fx:id="jobTypeColumn" prefWidth="120"/>
+                    <TableColumn text="Price" fx:id="priceColumn" prefWidth="100"/>
+                    <TableColumn text="Description" fx:id="descriptionColumn" prefWidth="190"/>
+                    <TableColumn text="Status" fx:id="statusColumn" prefWidth="100"/>
+                    <TableColumn text="Action" fx:id="actionColumn" prefWidth="80"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+        <!-- Back Button (Centered below Table) -->
+        <HBox spacing="15" alignment="CENTER" layoutX="50" layoutY="400">
+            <Button text="Back to Dashboard" fx:id="backButton" onAction="#handleBack" 
+                    style="-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-background-radius: 5px;"/>
+        </HBox>
+    </children>
+</AnchorPane>

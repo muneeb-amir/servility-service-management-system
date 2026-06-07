@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManageApplicationsProviderController" stylesheets="app.css">
+    <children>
+        <!-- Header -->
+        <Label text="Manage Applications" style="-fx-font-size: 24; -fx-font-weight: bold;" layoutX="150" layoutY="20"/>
+
+        <!-- TableView for Applications -->
+        <TableView fx:id="applicationsProviderTable" layoutX="50" layoutY="80" prefHeight="300" prefWidth="500">
+            <columns>
+                <TableColumn text="Job Type" fx:id="jobTypeColumn" prefWidth="150"/>
+                <TableColumn text="Location" fx:id="locationColumn" prefWidth="120"/>
+                <TableColumn text="Time" fx:id="timeColumn" prefWidth="100"/>
+                <TableColumn text="Description" fx:id="descriptionColumn" prefWidth="130"/>
+                <TableColumn text="Completed" fx:id="statusColumn" prefWidth="100"/>
+            </columns>
+        </TableView>
+
+        <!-- Confirm Button -->
+        <Button text="Confirm" fx:id="confirmButton" onAction="#handleConfirm" layoutX="220" layoutY="400" style="-fx-background-color: #28a745; -fx-text-fill: white;" visible="false"/>
+
+        <!-- Back Button -->
+        <HBox spacing="15" alignment="CENTER" layoutX="50" layoutY="440" prefWidth="500">
+            <Button text="Back" fx:id="backButton" onAction="#handleBack" style="-fx-background-color: #007bff; -fx-text-fill: white;"/>
+        </HBox>
+    </children>
+</AnchorPane>

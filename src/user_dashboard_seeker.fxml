@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="UserDashboardSeekerController" prefHeight="600.0" prefWidth="800.0" stylesheets="app.css">
+    <children>
+        <!-- VBox for the entire content -->
+        <VBox alignment="CENTER" spacing="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" AnchorPane.bottomAnchor="50.0">
+            <children>
+                <!-- Title at the top -->
+                <Label text="Servility" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #2196F3;" alignment="CENTER"/>
+
+                <!-- Options -->
+                <VBox alignment="CENTER" spacing="25.0">
+                    <children>
+                        <Button text="Post New Service Request" fx:id="postRequestButton" prefWidth="350.0" prefHeight="50.0"
+                                style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" 
+                                onAction="#handlePostRequest"/>
+                        <Button text="View Posted Requests" fx:id="viewRequestsButton" prefWidth="350.0" prefHeight="50.0"
+                                style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" 
+                                onAction="#handleViewRequests"/>
+                        <Button text="Search Services" fx:id="searchProvidersButton" prefWidth="350.0" prefHeight="50.0"
+                                style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" 
+                                onAction="#handleSearchServices"/>
+                        <Button text="Manage Profile" fx:id="manageProfileButton" prefWidth="350.0" prefHeight="50.0"
+                                style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" 
+                                onAction="#handleManageProfile"/>
+                        <Button text="Check Balance" fx:id="checkBalanceButton" prefWidth="350.0" prefHeight="50.0"
+                                style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" 
+                                onAction="#handleCheckBalance"/>
+                        <Button text="Logout" fx:id="logoutButton" prefWidth="350.0" prefHeight="50.0"
+                                style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" 
+                                onAction="#handleLogout"/>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="SignupController" prefHeight="600.0" prefWidth="800.0" stylesheets="app.css">
+    <children>
+        <VBox alignment="CENTER" spacing="15.0" 
+              AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+            <children>
+                <Label text="Registration" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+                <TextField fx:id="nameField" promptText="Name" prefWidth="400.0" />
+                <TextField fx:id="emailField" promptText="Email" prefWidth="400.0" />
+                <PasswordField fx:id="passwordField" promptText="Password" prefWidth="400.0" />
+                <ComboBox fx:id="roleComboBox" promptText="Select Role" prefWidth="400.0" />
+                
+                <!-- Fields for Service Seeker -->
+                <VBox fx:id="seekerFields" visible="false" managed="false" spacing="10.0">
+                    <TextField fx:id="bankBalanceField" promptText="Bank Balance" prefWidth="400.0" />
+                </VBox>
+                
+                <!-- Fields for Service Provider -->
+                <VBox fx:id="providerFields" visible="false" managed="false" spacing="10.0">
+                    <ComboBox fx:id="jobTypeComboBox" promptText="Job Type" prefWidth="400.0" />
+                    <TextField fx:id="experienceField" promptText="Years of Experience" prefWidth="400.0" />
+                    <TextField fx:id="idNumberField" promptText="ID Number" prefWidth="400.0" />
+                </VBox>
+                
+                <Button text="Register" onAction="#handleSignup" prefWidth="400.0" />
+                <Hyperlink fx:id="goToLogin" text="Already have an account? Login here" onAction="#goToLogin" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

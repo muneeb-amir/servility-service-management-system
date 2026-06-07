@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewOpenRequestsProviderController" style="-fx-background-color: #f4f4f4;">
+    <children>
+        <!-- Header Section -->
+        <VBox alignment="CENTER" spacing="20" prefWidth="800" prefHeight="600" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" 
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            
+            <!-- Title Header -->
+            <Label text="Open Job Requests" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+            
+            <!-- Table for Open Requests -->
+            <TableView fx:id="requestsTable" prefHeight="400" prefWidth="700" style="-fx-border-color: #dcdcdc; -fx-background-color: white; -fx-padding: 10;">
+                <columns>
+                    <!-- Seeker Name Column -->
+                    <TableColumn fx:id="seekerNameColumn" text="Seeker Name" prefWidth="150" />
+                    <!-- Job Type (Expertise) Column -->
+                    <TableColumn fx:id="expertiseColumn" text="Job Type" prefWidth="150" />
+                    <!-- Budget Column -->
+                    <TableColumn fx:id="budgetColumn" text="Budget" prefWidth="150" />
+                    <!-- Description Column -->
+                    <TableColumn fx:id="descriptionColumn" text="Description" prefWidth="150" />
+                    <!-- Status Column -->
+                    <TableColumn fx:id="statusColumn" text="Status" prefWidth="100" />
+                    <!-- Action Column -->
+                    <TableColumn fx:id="actionColumn" text="Actions" prefWidth="100" />
+                </columns>
+            </TableView>
+            
+            <!-- Back Button -->
+            <Button text="Back to Dashboard" fx:id="backButton" prefWidth="250" prefHeight="50"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" 
+                    onAction="#handleBack" />
+        </VBox>
+    </children>
+</AnchorPane>

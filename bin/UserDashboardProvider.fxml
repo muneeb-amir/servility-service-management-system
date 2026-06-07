@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="UserDashboardProviderController" prefHeight="600.0" prefWidth="800.0" stylesheets="app.css">
+    <children>
+        <!-- Header (Centered at the top) -->
+        <Label text="Provider Dashboard" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #0078D7;" alignment="CENTER" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+
+        <!-- Navigation Panel (Centered in the middle) -->
+        <VBox spacing="25.0" alignment="CENTER" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0" AnchorPane.bottomAnchor="150.0">
+            <children>
+                <Button text="View and Accept Requests" fx:id="viewRequestsButton" prefWidth="400.0" prefHeight="50.0"
+                        onAction="#handleViewAndAcceptRequests" 
+                        style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                
+                <Button text="Post New Service Request" fx:id="postServiceRequestButton" prefWidth="400.0" prefHeight="50.0"
+                        onAction="#handlePostNewServiceRequest" 
+                        style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                
+                <Button text="View Earnings" fx:id="viewEarningsButton" prefWidth="400.0" prefHeight="50.0"
+                        onAction="#handleViewEarnings" 
+                        style="-fx-background-color: #0078D7; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                
+                <Button text="Logout" fx:id="logoutButton" prefWidth="400.0" prefHeight="50.0"
+                        onAction="#handleLogout" 
+                        style="-fx-background-color: #D9534F; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

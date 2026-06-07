@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchProvidersController" stylesheets="app.css">
+    <children>
+        <!-- Header -->
+        <Label text="Search Service Providers" style="-fx-font-size: 24;" layoutX="200" layoutY="20"/>
+        
+        <!-- Search Criteria -->
+        <Label text="Job Type:" layoutX="50" layoutY="80"/>
+        <TextField fx:id="jobTypeField" layoutX="150" layoutY="80" prefWidth="300"/>
+        
+        <Label text="Location:" layoutX="50" layoutY="120"/>
+        <TextField fx:id="locationField" layoutX="150" layoutY="120" prefWidth="300"/>
+        
+        <Label text="Service Type:" layoutX="50" layoutY="160"/>
+        <TextField fx:id="serviceTypeField" layoutX="150" layoutY="160" prefWidth="300"/>
+        
+        <!-- Search Button -->
+        <Button text="Search" fx:id="searchButton" layoutX="150" layoutY="200" onAction="#handleSearch"/>
+        
+        <!-- Results List -->
+        <ListView fx:id="providersListView" layoutX="50" layoutY="250" prefWidth="500" prefHeight="200"/>
+        
+        <!-- Back Button -->
+        <HBox spacing="10" alignment="CENTER" layoutX="150" layoutY="470">
+            <Button text="Back to Dashboard" fx:id="backButton" onAction="#handleBack"/>
+        </HBox>
+    </children>
+</AnchorPane>

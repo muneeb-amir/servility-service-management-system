@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewEarningsProviderController">
+    <children>
+        <!-- Header -->
+        <Label text="Your Earnings" style="-fx-font-size: 24;" layoutX="150" layoutY="20"/>
+
+        <!-- Earnings Summary -->
+        <Label text="Total Earnings:" layoutX="50" layoutY="80" style="-fx-font-size: 16;"/>
+        <Label fx:id="totalEarningsLabel" layoutX="200" layoutY="80" style="-fx-font-size: 16;"/>
+
+        <!-- List of Transactions -->
+        <ListView fx:id="earningsListView" layoutX="50" layoutY="120" prefHeight="300" prefWidth="400"/>
+
+        <!-- Back Button -->
+        <Button text="Back" fx:id="backButton" layoutX="200" layoutY="450" onAction="#handleBack"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="LoginController" prefHeight="600.0" prefWidth="800.0" stylesheets="app.css" style="-fx-background-color: #add8e6;">
+    <children>
+        <!-- ScrollPane for responsiveness -->
+        <ScrollPane fitToWidth="true" fitToHeight="true" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" 
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" >
+            <content>
+                <!-- VBox for layout -->
+                <VBox alignment="CENTER" spacing="20.0" style="-fx-padding: 20;" prefWidth="600.0">
+                    
+                    <!-- Servility Logo -->
+                    <ImageView fx:id="logoImageView" fitWidth="350.0" fitHeight="250.0">
+                        <image>
+                            <Image url="servility.png" />
+                        </image>
+                    </ImageView>
+
+                    <!-- Login form components -->
+                    <TextField fx:id="Email" promptText="Email" prefWidth="300.0" />
+                    <PasswordField fx:id="passwordField" promptText="Password" prefWidth="300.0" />
+                    
+                    <!-- ComboBox for Role Selection -->
+                    <ComboBox fx:id="roleComboBox" promptText="Login as" prefWidth="300.0" />
+                    
+                    <!-- Login Button -->
+                    <Button text="Login" onAction="#handleLogin" 
+                            style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px;" prefWidth="300.0" />
+                    
+                    <!-- Sign-up Hyperlink -->
+                    <Hyperlink fx:id="goToSignUp" text="Don't have an account? Sign up" 
+                               onAction="#goToSignUp" style="-fx-font-size: 14px;" alignment="CENTER" />
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

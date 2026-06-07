@@ -1,0 +1,39 @@
+/* Header Styles */
+.label-header {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2F4F4F;
+}
+
+/* Label Styles */
+.label {
+    -fx-font-size: 14;
+    -fx-text-fill: #000000;
+}
+
+/* TextField Styles */
+.text-field {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #ccc;
+    -fx-padding: 10px;
+}
+
+/* Button Styles */
+.button {
+    -fx-font-size: 14;
+    -fx-padding: 10px 20px;
+    -fx-text-fill: white;
+}
+
+/* Set background color for all AnchorPanes */
+AnchorPane {
+    -fx-background-color: #addee6; /* Light blue color */
+}
+
+.button-back {
+    -fx-background-color: red;
+}
+
+.button-submit {
+    -fx-background-color: #008CBA;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManageProfileController" stylesheets="app.css">
+    <children>
+        <!-- Header (Centered) -->
+        <Label text="Manage Your Profile" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2196F3;" 
+               AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="20" alignment="CENTER"/>
+
+        <!-- Profile Form (GridPane with responsive layout, centered) -->
+        <GridPane hgap="15" vgap="15" alignment="CENTER" 
+                  AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="80" AnchorPane.bottomAnchor="150">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="30"/>
+                <ColumnConstraints percentWidth="70"/>
+            </columnConstraints>
+            <children>
+                <Label text="Name:" style="-fx-font-size: 14px;"/>
+                <TextField fx:id="nameField" GridPane.columnIndex="1" style="-fx-padding: 5px; -fx-font-size: 14px;"/>
+
+                <Label text="Email:" GridPane.rowIndex="1" style="-fx-font-size: 14px;"/>
+                <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-padding: 5px; -fx-font-size: 14px;"/>
+
+                <Label text="Password:" GridPane.rowIndex="2" style="-fx-font-size: 14px;"/>
+                <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" style="-fx-padding: 5px; -fx-font-size: 14px;"/>
+            </children>
+        </GridPane>
+
+        <!-- Save and Back Buttons (Centered) -->
+        <HBox spacing="15" alignment="CENTER" 
+              AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="300" AnchorPane.bottomAnchor="50">
+            <Button text="Save Changes" fx:id="saveButton" onAction="#handleSaveChanges" 
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-background-radius: 5px;"/>
+            <Button text="Back" fx:id="backButton" onAction="#handleBack" 
+                    style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-background-radius: 5px;"/>
+        </HBox>
+    </children>
+</AnchorPane>
